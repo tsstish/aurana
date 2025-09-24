@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--choco:#0d0a09;--cream:#f5efe9;}
+body{background:var(--choco);color:var(--cream);font-family:sans-serif;}
+.gold-glow{box-shadow:0 0 0 1px rgba(212,175,55,.55),0 0 18px rgba(212,175,55,.2)}
+.gold-glow:hover{box-shadow:0 0 0 1px rgba(212,175,55,.85),0 0 28px rgba(212,175,55,.3)}
+.card-gleam{position:relative;overflow:hidden}
+.card-gleam::after{content:"";position:absolute;inset:-1px;pointer-events:none;z-index:2;
+background-image:linear-gradient(120deg,rgba(255,255,255,0) 15%,rgba(255,255,255,.14) 50%,rgba(255,255,255,0) 85%);
+opacity:.18;animation:auranaGleam 7s ease-in-out infinite}
+@keyframes auranaGleam{0%{background-position:120% -20%}50%{background-position:-20% 120%}100%{background-position:120% -20%}}
